@@ -86,7 +86,7 @@ const LatestProjects = () => {
         <Card key={index} sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
-            image={`http://localhost:5000/${item.image}` || "https://via.placeholder.com/345x140"}
+            image={`${import.meta.env.VITE_BACKEND_URL}${item.image}` || "https://via.placeholder.com/345x140"}
             title={item.title || "Project Image"}
           />
           <CardContent>

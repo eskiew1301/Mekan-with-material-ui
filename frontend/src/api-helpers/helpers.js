@@ -1,5 +1,10 @@
 import axios from "axios";
 
+const apiClient = axios.create({
+  baseURL: import.meta.env.VITE_BACKEND_URL || "http://localhost:5000", // Default fallback
+  timeout: 10000,
+});
+
 // Utility function for API requests
 const apiRequest = async (method, url, data = null, headers = {}) => {
   try {
@@ -10,7 +15,7 @@ const apiRequest = async (method, url, data = null, headers = {}) => {
       headers,
     };
 
-    const res = await axios(options);
+    const res = await apiClient(options);
 
     if (res.status >= 200 && res.status < 300) {
       return res.data;
