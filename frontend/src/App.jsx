@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import React, { Suspense, useEffect } from "react";
 import { authActions } from "./store";
+import { Box, Typography } from "@mui/material";
 import Header from "./Header/Header";
 import Home from "./Home/Home";
 //import AboutUs from './AboutUs/AboutUs'
@@ -17,7 +18,6 @@ import Home from "./Home/Home";
 //import AddNewPdfDocument from "./Document_gallery/AddNewPdfDocument"
 //import AddNewImage from "./Images_gallery/AddNewImages"
 import LatestProjects from "./Projects/LatestProjects";
-import { Box, Typography } from "@mui/material";
 //import Users from "./Auth/Users"
 
 const Users = React.lazy(() => import("./Auth/Users"));
