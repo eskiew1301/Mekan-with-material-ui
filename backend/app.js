@@ -70,7 +70,7 @@ mongoose
     `mongodb+srv://elseskie:${process.env.MONGODB_PASSWORD}@cluster0.nig6b.mongodb.net/${process.env.DATABASE_NAME}?retryWrites=true&w=majority&appName=Cluster0`
   )
   .then(
-    app.listen(5000, () =>
+    app.listen(process.env.PORT || 5000, () =>
       console.log("Connection successful Listening to localhost Port 5000")
     )
   )
