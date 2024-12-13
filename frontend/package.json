@@ -2,7 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  
   "homepage": "https://mekanplc.com",
   "scripts": {
     "dev": "vite",

@@ -54,7 +54,7 @@ function App() {
         <Header />
       </header>
       <section>
-        <Suspense fallback={<Box><Typography>Loading</Typography></Box>}>
+        <Suspense fallback={<div><Typography>Loading</Typography></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
