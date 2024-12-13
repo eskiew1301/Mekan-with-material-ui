@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getProjectDetails, projectUpdate } from "../api-helpers/helpers";
 import { Box, Button, FormLabel, TextField, Typography } from "@mui/material";
 
 const UpdateProject = () => {
+  const navigate= useNavigate()
     const [project, setProject] = useState()
   const [inputs, setInputs] = useState({
     title: "",
@@ -32,7 +33,7 @@ const UpdateProject = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    projectUpdate(inputs, id).then((data)).catch(err=>console.log(err))
+    projectUpdate(inputs, id).then((data)=>navigate('/projects')).catch(err=>console.log(err))
    
   };
   return (

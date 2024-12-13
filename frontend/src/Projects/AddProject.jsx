@@ -43,7 +43,7 @@ const AddProject = () => {
           "Content-Type": "multipart/form-data",
         },
       }
-    ).then((data)=>console.log(data)).catch((err)=>{console.log(err)})
+    ).then((data)=>navigate('/projects')).catch((err)=>{console.log(err)})
 
   
   };
