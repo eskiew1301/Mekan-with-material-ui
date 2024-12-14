@@ -17,7 +17,6 @@ const AddUser = () => {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputs);
 
     signupRequest(inputs)
       .then((data) => {

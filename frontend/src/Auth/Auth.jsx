@@ -15,7 +15,7 @@ const Auth = () => {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputs);
+   
 
     loginRequest(inputs)
       .then((data) => localStorage.setItem("userId", data.id))

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Button, FormLabel, TextField, Typography } from "@mui/material";
-import { sendEmail } from "../api-helpers/helpers";
+import {sendEmail}  from "../api-helpers/helpers";
 
 const ContactUs = () => {
   const [inputs, setInputs] = useState({

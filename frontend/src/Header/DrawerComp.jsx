@@ -46,7 +46,9 @@ const DrawerComp = ({ links, subLinks }) => {
       />
 
       {/* Drawer */}
-      <Drawer open={openDrawer} onClose={handleDrawerToggle}>
+      <Drawer open={openDrawer} onClose={handleDrawerToggle} sx={{"& .MuiDrawer-paper": {
+          width: '50%' // Set the desired width
+        },}}>
         <List>
           {links.map((link, index) => (
             <ListItemButton

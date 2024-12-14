@@ -10,18 +10,9 @@ const Users = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const handleView = (id) => {
-    console.log("View user detail:", id);
-    // Implement navigation or detail view logic here
-  };
-
-  const handleEdit = (id) => {
-    console.log("Edit user:", id);
-    // Implement edit user logic here (e.g., navigate to an edit form)
-  };
 
   const handleDelete = async (id) => {
-    console.log("Delete user:", id);
+
     try {
       await axios.delete(`${import.meta.env.VITE_BACKEND_URL}users/${id}`);
       setUsers((prevUsers) => prevUsers.filter((user) => user.id !== id));
